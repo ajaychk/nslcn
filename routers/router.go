@@ -7,4 +7,7 @@ import (
 
 func init() {
 	beego.Router("/", &controllers.MainController{})
+
+	// Device management
+	beego.Router("/nodes/?:id", &controllers.Nodes{})
 }
